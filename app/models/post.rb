@@ -1,11 +1,11 @@
 class Post < ApplicationRecord
   # モデルのインスタンスを生成
-  model = Model.new
+  # model = Model.new
 
   # インスタンスにデータを追加
-  model.text = "追加するデータ"
+  # model.text = "追加するデータ"
 
   # テーブルにレコードを保存
-  model.save
+  # model.save
 
 end
