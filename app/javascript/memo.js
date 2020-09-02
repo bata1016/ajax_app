@@ -11,8 +11,8 @@ function memo() {
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         return null; //エラーの際に処理を止めるための記述
       }
-      const item = XHR.response.post;
-      const list = document.getElementById("list");
+      const item = XHR.response.post; //親要素のを代入
+      const list = document.getElementById("list"); //個要素の作成
       const formText = document.getElementById("content");
       const HTML = `
       <div class="post" data-id=${item.id}>
@@ -22,7 +22,7 @@ function memo() {
          <div class="post-content">
          ${item.content}
          </div>
-       </div>`;
+       </div>`;                                 //レスポンスとなるHTMLの作成
        list.insertAdjacentHTML("afterend", HTML);
        formText.value = "";
     };
