@@ -5,8 +5,8 @@ class PostsController < ApplicationController
 
 
   def create
-    Post.create(content: params[:content])
-    redirect_to action: :index
+    post = Post.create(content: params[:content], checked: false) #checkedカラムに未読の情報を追加
+    render json: {post: post} #ajaxを可能にするためにデータをjsonに変換
   end
 
   def checked
